@@ -29,7 +29,7 @@ CREATE TABLE `admin` (
 -- ----------------------------
 -- Records of admin
 -- ----------------------------
-INSERT INTO `admin` VALUES ('1', 'EvanZhao', 'a1823931512');
+INSERT INTO `admin` VALUES ('1', 'EvanZhao', 'a123456');
 
 -- ----------------------------
 -- Table structure for blog

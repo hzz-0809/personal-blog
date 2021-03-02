@@ -1,0 +1,50 @@
+.UserHome {
+  .first-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .second-row {
+    margin-top: 60px;
+  }
+  .third-row {
+    margin-top: 60px;
+    .el-divider {
+      width: 80%;
+      max-width: 1500px;
+      margin: 0 auto 60px;
+      .el-divider__text {
+        text-align: center;
+        font-size: 3.2rem;
+        font-family: myFont;
+      }
+    }
+    .comment-container {
+      width: 80%;
+      margin: 0 auto 60px;
+    }
+    #comment-full-tip {
+      text-align: center;
+      font-size: 12px;
+      color: #c0c4cc;
+    }
+  }
+  .LatestArticle {
+    margin-top: 30px;
+    width: 32vw;
+    height: 33vw;
+    max-height: 550px;
+    max-width: 550px;
+    min-width: 400px;
+    min-height: 420px;
+  }
+  .svg-home-container {
+    width: 38vw;
+    height: 38vw;
+    max-height: 650px;
+    max-width: 650px;
+    min-width: 400px;
+    min-height: 400px;
+  }
+}

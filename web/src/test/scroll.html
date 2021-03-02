@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .outer-container,
+    .content {
+      width: 200px;
+      height: 200px;
+    }
+
+    .outer-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .inner-container {
+      position: absolute;
+      left: 0;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+
+    /* for Chrome */
+    .inner-container::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outer-container">
+    <div class="inner-container">
+      <div class="content">
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+        123456<br>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

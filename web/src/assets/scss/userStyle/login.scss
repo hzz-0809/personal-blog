@@ -1,0 +1,54 @@
+#content {
+  min-width: 320px;
+  padding-top: 100px;
+  .box-card {
+    padding: 10px;
+    .svg-container {
+      width: 100%;
+      height: 100px;
+    }
+    .avatar {
+      text-align: center;
+      font-size: 30px;
+      user-select: none;
+    }
+    .pass-tip {
+      display: flex;
+      justify-content: space-between;
+      .link {
+        font-weight: 500;
+        user-select: none;
+      }
+    }
+    .button-item {
+      margin-top: 40px;
+    }
+  }
+  #login {
+    width: 100%;
+    display: block;
+    margin: 0 auto 0;
+  }
+  .footer {
+    padding: 30px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+
+h4 {
+  margin: 0;
+  i {
+    padding-right: 8px;
+  }
+}
+
+a {
+  color: #409eff;
+  text-decoration: none;
+}

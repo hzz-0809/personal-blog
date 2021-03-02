@@ -1,0 +1,25 @@
+:root {
+  font-size: 10px;
+}
+
+p {
+  font-size: 1.6rem;
+}
+@font-face {
+  font-family: myFont;
+  src: url(~@/assets/font/official-script.ttf);
+}
+
+/* 超大屏 */
+@media screen and (max-width: 1380px) {
+  :root {
+    font-size: 9px;
+  }
+}
+
+/* 电脑 */
+@media screen and (max-width: 1200px) {
+  :root {
+    font-size: 8px;
+  }
+}

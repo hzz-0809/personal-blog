@@ -1,0 +1,126 @@
+.UserInfo {
+  max-width: 1000px;
+
+  .el-card__body {
+    display: flex;
+    align-items: center;
+  }
+
+  .header {
+    .el-avatar {
+      width: 60px;
+      height: 60px;
+    }
+    .base-info {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      .el-avatar,
+      .base-info-data {
+        margin-left: 3rem;
+      }
+      .username,
+      .account-age,
+      .collection {
+        padding: 10px 5px;
+      }
+      i {
+        padding-right: 5px;
+      }
+      .label {
+        font-size: 1.4rem;
+        font-weight: 700;
+      }
+      .data {
+        font-weight: normal;
+        font-family: Georgia;
+      }
+    }
+    .el-divider {
+      height: 100px;
+    }
+    .integrity {
+      width: 50%;
+      margin-left: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .main {
+    margin: 50px 0 30px 0;
+    .title {
+      font-size: 2rem;
+      font-family: myFont;
+    }
+    form {
+      width: 100%;
+    }
+    .el-form-item {
+      margin-bottom: 30px;
+    }
+    .el-form-item__content {
+      display: flex;
+    }
+    .email,
+    .alias {
+      width: 300px;
+    }
+    .tip {
+      color: #909399;
+      font-size: 1.2rem;
+      margin-left: 2rem;
+    }
+  }
+
+  .save {
+    text-align: center;
+    .el-button {
+      width: 150px;
+      margin: 0 auto 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .UserInfo {
+    .header {
+      .el-avatar {
+        width: 50px;
+        height: 50px;
+      }
+      .el-progress,
+      svg {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .UserInfo {
+    .header {
+      .base-info {
+        width: 60%;
+      }
+      .integrity {
+        width: 40%;
+      }
+      .el-avatar {
+        width: 50px;
+        height: 50px;
+      }
+      .el-progress,
+      svg {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}

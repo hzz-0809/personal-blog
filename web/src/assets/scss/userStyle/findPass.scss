@@ -1,0 +1,90 @@
+$contWidth: 440px;
+$formContWidth: $contWidth * 2;
+$formWidth: $contWidth - 40px;
+
+$formMoveDist: $formWidth - $formContWidth; //向左移，值为负数
+
+.formActive {
+  transform: translate($formMoveDist, 0);
+}
+
+#content {
+  width: $contWidth;
+  margin: 0 auto 0;
+  padding-top: 100px;
+  .box-card {
+    width: 100%;
+    padding: 10px;
+    .svg-container {
+      width: 100%;
+      height: 100px;
+    }
+    .container {
+      width: $formContWidth;
+      display: flex;
+      justify-content: space-between;
+      transition: transform 1s ease-in-out;
+      form {
+        width: $formWidth;
+        .item {
+          display: flex;
+          #send {
+            margin-left: 5px;
+            width: 150px;
+          }
+        }
+      }
+      .finish {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: $formWidth;
+        height: 260px;
+        background-color: rgba(236, 240, 241, 0.95);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        i {
+          padding-right: 5px;
+          color: #67c23a;
+          font-size: 24px;
+        }
+        .el-button {
+          position: absolute;
+          bottom: 60px;
+        }
+      }
+    }
+
+    #validate,
+    #reset {
+      width: 100%;
+      display: block;
+      margin: 0 auto 0;
+    }
+  }
+
+  .footer {
+    padding: 30px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+
+h4 {
+  margin: 0;
+  i {
+    padding-right: 8px;
+  }
+}
+a {
+  text-decoration: none;
+  color: #409eff;
+}

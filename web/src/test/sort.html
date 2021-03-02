@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let tags = [
+      { name: "起飞", type: 0 },
+      { name: "1997年", type: 2 },
+      { name: "上坡下坡", type: 4 },
+      { name: "芜湖", type: 1 }
+    ]
+    console.log("before----")
+    console.log(tags)
+    tags.sort((a, b) => a.type - b.type);
+    console.log("after----")
+    console.log(tags)
+  </script>
+</body>
+
+</html>

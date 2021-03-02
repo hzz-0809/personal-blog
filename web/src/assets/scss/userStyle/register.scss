@@ -1,0 +1,261 @@
+$contW: 900px;
+$contH: 550px;
+$imgW: 260px;
+$btnH: 36px;
+$inputW: 260px;
+$formW: $contW - $imgW;
+
+$switchAT: 1.2s;
+$txt-color: #ecf0f1;
+$diffRatio: ($contW - $imgW) / $contW;
+
+.register-floor {
+  padding-top: 8rem;
+  width: $contW;
+  position: relative;
+  margin: 0 auto 0;
+
+  //激活前
+  .cont {
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #ebeef5;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    height: $contH;
+    width: 100%;
+    margin: 0 auto 0;
+    overflow: hidden;
+
+    .sub-cont {
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      background-color: #fff;
+      left: $formW;
+      top: 0;
+      padding-left: $imgW;
+      transition: transform $switchAT ease-in-out;
+    }
+
+    .el-form,
+    .notice {
+      top: 0;
+      position: absolute;
+      width: $formW;
+      height: 100%;
+      box-sizing: border-box;
+      transition: transform $switchAT ease-in-out;
+      .el-form-item {
+        width: $inputW;
+        margin: 20px auto 0;
+        text-align: center;
+        label {
+          padding: 0;
+          font-size: 14px;
+        }
+        .el-form-item__error {
+          width: 100%;
+          text-align: center;
+        }
+        input {
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          border-radius: 0;
+          text-align: center;
+        }
+      }
+      .btn-item {
+        margin-top: 35px;
+      }
+    }
+
+    .img {
+      overflow: hidden;
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: $imgW;
+      height: 100%;
+      padding-top: 360px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: $contW;
+        height: 100%;
+        background-image: url(~@/assets/img/background/register-bg.jpg);
+        background-size: cover;
+        transition: transform $switchAT ease-in-out;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+      }
+
+      &-text {
+        width: 100%;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        top: 50px;
+        text-align: center;
+        color: $txt-color;
+        transition: transform $switchAT ease-in-out;
+
+        .svg-container {
+          width: 100%;
+          height: 100px;
+        }
+        .text-item {
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 100px;
+          transition: transform $switchAT ease-in-out;
+          p {
+            font-size: 14px;
+            line-height: 1.5;
+          }
+        }
+      }
+
+      .agreement {
+        display: block;
+        text-align: center;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        span {
+          padding-left: 5px;
+          font-size: 12px;
+          color: $txt-color;
+        }
+      }
+
+      &-btn {
+        overflow: hidden;
+        z-index: 2;
+        position: relative;
+        width: 100px;
+        height: $btnH;
+        margin: 20px auto 0;
+        background: transparent;
+        color: $txt-color;
+        font-size: 14px;
+        cursor: pointer;
+        border: 2px solid $txt-color;
+        border-radius: 30px;
+        user-select: none;
+
+        span {
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          transition: transform $switchAT;
+        }
+      }
+    }
+
+    .notice-text {
+      transform: translateX($imgW * -2);
+    }
+    .img-btn-up {
+      transform: translateY($btnH * -2);
+    }
+
+    .notice {
+      transform: translate3d($contW * -1, 0, 0);
+    }
+
+    .sign-up {
+      transition-timing-function: ease-out;
+    }
+
+    .el-button {
+      width: $inputW;
+    }
+
+    li {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+
+  //激活后
+  .cont.active {
+    .sub-cont {
+      transform: translate3d($formW * -1, 0, 0);
+    }
+
+    .img:before {
+      transform: translate3d($formW, 0, 0);
+    }
+
+    .notice {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .sign-up {
+      transition-timing-function: ease-in-out;
+      transition-duration: $switchAT;
+      transform: translate3d($formW, 0, 0);
+    }
+    //描述文本
+    .notice-text {
+      transform: translateX(0);
+    }
+
+    .sign-up-text {
+      transform: translateX($imgW * 2);
+    }
+    //按钮文本
+    .img-btn-notice {
+      transform: translateY($btnH * 2);
+    }
+
+    .img-btn-up {
+      transform: translateY(0);
+    }
+  }
+
+  //footer
+  .footer {
+    padding: 30px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      margin-right: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: #409eff;
+    }
+  }
+}

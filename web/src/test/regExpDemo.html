@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let regExp = /<img[^>]*src="([^>"]*)"[^>]*>/g;
+        // let regExp = /<img[^>]*src\s*=\s*[\"|\']?\s*([^>\"\'\s]*)(\">|\"\/>)/g;
+        // let regExp = /(\d+)(asd)o?/g;
+        let str = `<img src="1fsdfsd" style="widjlkjfds"><img src="123456" style="widjlkjfds">`
+        // do {
+        //     if (regExp.exec(str))
+        //         str = str.replace(RegExp.$1, "123")
+        // } while (regExp.lastIndex !== 0)
+        let ss = str;
+        do {
+            if (regExp.exec(str)) {
+                console.log(RegExp.$1)
+                ss = ss.replace(RegExp.$1, "a");
+            }
+        } while (regExp.lastIndex !== 0)
+
+        console.log(ss)
+    </script>
+</body>
+
+</html>

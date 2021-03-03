@@ -23,7 +23,7 @@
           img-format="png"
           :noRotate="false"
           :field="field"
-          url="http://192.168.0.103:3000/user/update/avatar"
+          url="http://127.0.0.1:3344/user/update/avatar"
           method="PUT"
           :headers="headers"
         ></my-upload>

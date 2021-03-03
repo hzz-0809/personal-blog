@@ -131,7 +131,7 @@ export default {
       blog: {
         title: "",
         create_time: "",
-        comment_num: 5000,
+        comment_num: 0,
         view_num: "-",
         collenction_num: "-",
         content: "",
@@ -161,6 +161,7 @@ export default {
       this.blog.tags = res.data.data.tags;
       this.blog.opposition = res.data.data.opposition;
       this.blog.favor = res.data.data.favor;
+      this.blog.comment_num = res.data.data.comment_num;
     },
     async getUserData() {
       let res = await getUserInfo();

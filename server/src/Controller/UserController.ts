@@ -248,7 +248,8 @@ class UserController {
         let blogService: BlogService = new BlogServiceImpl();
         let blog: Blog = await blogService.getBlog(blog_id);
         let tags: Array<any> = await blogService.getBlogTag(blog_id);
-
+        let commentService: CommentService = new CommentServiceImpl();
+        let comment_num: number = await commentService.getCommentNumByBlogId(blog_id);
         if (blog && tags) {
             let data: Object = {
                 blog_id: blog.blog_id,
@@ -257,7 +258,7 @@ class UserController {
                 content: blog.content,
                 favor: blog.favor,
                 opposition: blog.opposition,
-                tags
+                tags, comment_num
             }
             res.send(CommonUtil.com(true, data, "成功拉取博文！"));
         } else res.send(CommonUtil.com(false, null, ConstantUtil.serverErrMsg))

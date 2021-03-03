@@ -20,14 +20,14 @@ class UserDaoImpl implements UserDao {
     }
 
     public insertEmail(user: User): Promise<boolean> {
-        let sql: string = "insert into user(email,username,password,gender,account_create_time) values (?,?,?,?,?)";
-        let sqlParams: Array<number | string> = [user.email, user.username, user.password, user.gender, user.account_create_time];
+        let sql: string = "insert into user(email,username,password,gender,account_create_time,avatar) values (?,?,?,?,?,?)";
+        let sqlParams: Array<number | string> = [user.email, user.username, user.password, user.gender, user.account_create_time, user.avatar];
         this.connection = DBUtil.createConnection();
         this.connection.connect();
         return new Promise((resolve, reject) => {
             this.connection.query(sql, sqlParams, err => {
                 if (err) reject(err);
-                else resolve(true)
+                else resolve(true);
             })
             this.connection.end();
         })

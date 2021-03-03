@@ -128,7 +128,7 @@ class CommentDaoImpl implements CommentDao {
         })
     }
 
-    public queryAllBayBlogId(blog_id: string): Promise<Array<any>> {
+    public queryAllByBlogId(blog_id: string): Promise<Array<any>> {
         let sql: string = "select * from comment where blog_id = ?";
         let sqlParams: Array<string> = [blog_id];
         this.connection = DBUtil.createConnection();

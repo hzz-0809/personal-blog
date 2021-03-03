@@ -9,6 +9,8 @@ interface CommentService {
 
     getCommentNum(): Promise<number>;
 
+    getCommentNumByBlogId(blog_id:string):Promise<number>;
+
     getLatestComments(limit: number): Promise<Array<any>>;
 
 }

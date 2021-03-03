@@ -15,7 +15,7 @@ interface CommentDao {
 
     queryAll(): Promise<Array<any>>;
 
-    queryAllBayBlogId(blog_id: string): Promise<Array<any>>
+    queryAllByBlogId(blog_id: string): Promise<Array<any>>
 
     queryLatestLimit(limit: number): Promise<any>
 }

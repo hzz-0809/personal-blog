@@ -184,6 +184,15 @@ class CommentServiceImpl implements CommentService {
         }
     }
 
+    public async getCommentNumByBlogId(blog_id: string): Promise<number> {
+        try {
+            let result: Array<any> = await this.commentDao.queryAllByBlogId(blog_id);
+            if (result) return result.length;
+            else return 0;
+        } catch (e) {
+            return undefined;
+        }
+    }
 }
 
 export default CommentServiceImpl;

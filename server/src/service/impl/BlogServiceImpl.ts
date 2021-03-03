@@ -11,8 +11,6 @@ import BlogResolutionDaoImpl from "../../dao/impl/BlogResolutionDaoImpl";
 import BlogResolution from "../../model/BlogResolution";
 import ResolutionEnum from "../../enum/ResolutionEnum";
 import ChangeEnum from "../../enum/ChangeEnum";
-import CommentService from "../CommentService";
-import CommentServiceImpl from "./CommentServiceImpl";
 import CommentDao from "../../dao/CommentDao";
 import CommentDaoImpl from "../../dao/impl/CommentDaoImpl";
 
@@ -233,10 +231,10 @@ class BlogServiceImpl implements BlogService {
                     let blog_id: string = blogs[index].blog_id
                     //查标签
                     let tags: Array<any> = await this.blogDao.findTagById(blog_id);
-                    if (tags.length > 2) tags = tags.splice(2);//前端只需要两个标签
+                    if (tags.length > 2) tags.splice(2);//前端只需要两个标签
                     blogs[index].tags = tags;
                     //找评论数
-                    let comment: Array<any> = await commentDao.queryAllBayBlogId(blog_id);
+                    let comment: Array<any> = await commentDao.queryAllByBlogId(blog_id);
                     if (comment) blogs[index].commentNum = comment.length;
                     else blogs[index].commentNum = 0;
                 }

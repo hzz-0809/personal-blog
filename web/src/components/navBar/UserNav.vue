@@ -35,7 +35,7 @@ export default {
   name: "UserNav",
   data() {
     return {
-      profileBlog_id: "99bae100-7427-11eb-8d77-29e9605798d0",
+      profileBlog_id: "fa6bd7a0-7b4a-11eb-8043-d161b6cd2ea7",
     };
   },
   components: {

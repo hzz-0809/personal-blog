@@ -3,10 +3,9 @@ import * as mysql from "mysql"
 class DBUtil {
     public static createConnection() {
         return mysql.createConnection({
-            // host: '115.29.177.15',
-            host:'127.0.0.1',
+            host: '127.0.0.1',//ip地址
             user: 'root',
-            password: '123456',//mysql密码
+            password: '187765',//mysql密码,
             database: 'blog',
             charset: 'utf8mb4'
         });

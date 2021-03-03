@@ -5,7 +5,7 @@ class DBUtil {
         return mysql.createConnection({
             host: '127.0.0.1',//ip地址
             user: 'root',
-            password: '187765',//mysql密码,
+            password: '123456',//mysql密码,
             database: 'blog',
             charset: 'utf8mb4'
         });

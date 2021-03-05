@@ -7,7 +7,7 @@ class ConstantUtil {
     public static upBlogPath: string = path.join(__dirname, '../../upload/blog/');//blog路径
     public static upProfilePath: string = path.join(__dirname, '../../upload/profile/');//profile路径
     public static emailSender: string = "3286958203@qq.com";//邮件发送人
-    public static emailPass: string = "xtyqafjzuopichba";//开启POP3/SMTP的密码
+    public static emailPass: string = "xtyqafdfduopichdg";//开启POP3/SMTP的密码
     public static privateKey: string = "EvanZhao";//jwt私钥
     public static serverErrMsg: string = "500：服务器出现了意料之外的问题，请稍后再试。"
 }
